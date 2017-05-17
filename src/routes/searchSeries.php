@@ -15,7 +15,7 @@ $app->post('/api/Anilist/searchSeries', function ($request, $response) {
     $accessToken = $post_data['args']['accessToken'];
     $type = $post_data['args']['seriesType'];
     $query = $post_data['args']['query'];
-    $query_str = $settings['default_url'] . "search/$query";
+    $query_str = $settings['default_url'] . "$type/search/$query";
     $client = $this->httpClient;
 
     try {
