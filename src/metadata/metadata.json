@@ -203,6 +203,12 @@
           "type": "credentials",
           "info": "Access Token",
           "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "userId",
+          "required": true
         }
       ],
       "callbacks": [{
@@ -222,24 +228,11 @@
           "type": "credentials",
           "info": "Access Token",
           "required": true
-        }
-      ],
-      "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
-    },
-    {
-      "name": "getUserFavourites",
-      "description": "Returns a user’s favourites.",
-      "args": [
+        },
         {
-          "name": "accessToken",
-          "type": "credentials",
-          "info": "Access Token",
+          "name": "userId",
+          "type": "String",
+          "info": "userId",
           "required": true
         }
       ],
@@ -259,6 +252,13 @@
           "name": "accessToken",
           "type": "credentials",
           "info": "Access Token",
+          "required": true
+        },
+        ,
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "userId",
           "required": true
         }
       ],
@@ -368,61 +368,6 @@
           "required": true
         },
         {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
-          "name": "hidden",
-          "type": "Boolean",
-          "info": "List hidden",
-          "required": true
-        }
-      ],
-      "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
-    },
-    {
-      "name": "createAnimeListEntry",
-      "description": "Get anime list entry",
-      "args": [
-        {
-          "name": "accessToken",
-          "type": "credentials",
-          "info": "Access Token",
-          "required": true
-        },
-        {
-          "name": "id",
-          "type": "String",
-          "info": "Anime id",
-          "required": true
-        },
-        {
-          "name": "listStatus",
-          "type": "String",
-          "info": "watching,completed,on-hold,dropped,plan to watch",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
           "name": "hidden",
           "type": "Boolean",
           "info": "List hidden",
@@ -457,61 +402,6 @@
           "name": "listStatus",
           "type": "String",
           "info": "watching,completed,on-hold,dropped,plan to watch",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
-          "name": "hidden",
-          "type": "Boolean",
-          "info": "List hidden",
-          "required": true
-        }
-      ],
-      "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
-    },
-    {
-      "name": "editAnimeListEntry",
-      "description": "Edit anime list entry",
-      "args": [
-        {
-          "name": "accessToken",
-          "type": "credentials",
-          "info": "Access Token",
-          "required": true
-        },
-        {
-          "name": "id",
-          "type": "String",
-          "info": "List entry id",
-          "required": true
-        },
-        {
-          "name": "listStatus",
-          "type": "String",
-          "info": "watching,completed,on-hold,dropped,plan to watch",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "List description",
           "required": true
         },
         {
@@ -586,12 +476,6 @@
           "name": "notes",
           "type": "String",
           "info": "List description",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
-          "info": "Manga list description",
           "required": true
         },
         {
@@ -958,31 +842,6 @@
       }]
     },
     {
-      "name": "searchCharacter",
-      "description": "Search character",
-      "args": [
-        {
-          "name": "accessToken",
-          "type": "credentials",
-          "info": "Access Token",
-          "required": true
-        },
-        {
-          "name": "query",
-          "type": "String",
-          "info": "Search string",
-          "required": true
-        }
-      ],
-      "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
-    },
-    {
       "name": "getStaff",
       "description": "Returns staff model.",
       "args": [
@@ -1284,12 +1143,6 @@
           "type": "credentials",
           "info": "Access Token",
           "required": true
-        },
-        {
-          "name": "page",
-          "type": "String",
-          "info": "Number of page",
-          "required": false
         }
       ],
       "callbacks": [{
@@ -1309,12 +1162,6 @@
           "type": "credentials",
           "info": "Access Token",
           "required": true
-        },
-        {
-          "name": "page",
-          "type": "String",
-          "info": "Number of page",
-          "required": false
         }
       ],
       "callbacks": [{
