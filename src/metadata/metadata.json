@@ -1,0 +1,1471 @@
+{
+  "package": "Anilist",
+  "tagline": "Anilist API",
+  "description": "Connect to the Anilist API to host language-agnostic functions and algorithms via an API. Test an API call and export the code snippet into your app.",
+  "image": "https://logo.clearbit.com/anilist.co",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Anilist-Package",
+  "keywords": [
+    "API",
+    "anime",
+    "manga"
+  ],
+  "accounts": {
+    "domain": "anilist.co",
+    "credentials": [
+      "clientId",
+      "clientSecret",
+      "code",
+      "accessToken"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getAccessToken",
+      "description": "Return access token",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client ID",
+          "required": true
+        },
+        {
+          "name": "clientSecret",
+          "type": "credentials",
+          "info": "Client secret",
+          "required": true
+        },
+        {
+          "name": "code",
+          "type": "credentials",
+          "info": "Authorization code",
+          "required": true
+        },
+        {
+          "name": "redirectUri",
+          "type": "String",
+          "info": "Client redirect uri",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUser",
+      "description": "Return current user",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserActivity",
+      "description": "Get current user activity",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createUserActivity",
+      "description": "Create user activity",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Activity text",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "replyUserActivity",
+      "description": "Activity reply",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Activity text",
+          "required": true
+        },
+        {
+          "name": "replyId",
+          "type": "String",
+          "info": "Activity id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteUserActivity",
+      "description": "Delete single activity",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "activityId",
+          "type": "String",
+          "info": "Activity id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserNotifications",
+      "description": "Returns up to 10 notifications of the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserFollowers",
+      "description": "Returns followers of the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserFollowing",
+      "description": "Returns following of the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserFavourites",
+      "description": "Returns a user’s favourites.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserFavourites",
+      "description": "Returns a user’s favourites.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserAiring",
+      "description": "Returns anime list entry with small model anime, where the anime is currently airing and being currently watched by the user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "userSearch",
+      "description": "Returns small user models",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getAnimeList",
+      "description": "Get anime list",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "User ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createAnimeListEntry",
+      "description": "Get anime list",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Anime id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "watching,completed,on-hold,dropped,plan to watch",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "List hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createAnimeListEntry",
+      "description": "Get anime list entry",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Anime id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "watching,completed,on-hold,dropped,plan to watch",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "List hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "editAnimeListEntry",
+      "description": "Edit anime list entry",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Anime id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "watching,completed,on-hold,dropped,plan to watch",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "List hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "editAnimeListEntry",
+      "description": "Edit anime list entry",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "List entry id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "watching,completed,on-hold,dropped,plan to watch",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "List hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserMangalist",
+      "description": "Get user mangalist",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "User id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createMangaListEntry",
+      "description": "Create mangalist",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Manga id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "reading,completed,on-hold,dropped,plan to read",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "Manga list description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "Manga list hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "editMangaListEntry",
+      "description": "Edit mangalist",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Manga id",
+          "required": true
+        },
+        {
+          "name": "listStatus",
+          "type": "String",
+          "info": "reading,completed,on-hold,dropped,plan to read",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "List description",
+          "required": true
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "info": "Manga list description",
+          "required": true
+        },
+        {
+          "name": "hidden",
+          "type": "Boolean",
+          "info": "Manga list hidden",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteMangaListEntry",
+      "description": "Delete manga list entry",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "manId",
+          "type": "String",
+          "info": "Manga list id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteAnimeListEntry",
+      "description": "Delete anime list entry",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "animeId",
+          "type": "String",
+          "info": "Anime list id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSeriesPage",
+      "description": "Returns a series model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Series id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSeriesAiring",
+      "description": "Returns a series airing.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Series id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "seriesBrowse",
+      "description": "Returns up to 40 small series models.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "toggleFavouriteSeries",
+      "description": "Toggle favourite series.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Series id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchSeries",
+      "description": "Search series models.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getCharacter",
+      "description": "Get character model",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "characterId",
+          "type": "String",
+          "info": "Character id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getCharacterPage",
+      "description": "Get character page",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "characterId",
+          "type": "String",
+          "info": "Character id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "toggleFavouriteCharacter",
+      "description": "Toggle favourite character",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "characterId",
+          "type": "String",
+          "info": "Character id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchCharacter",
+      "description": "Search character",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchCharacter",
+      "description": "Search character",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getStaff",
+      "description": "Returns staff model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "staffId",
+          "type": "String",
+          "info": "Staff ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getStaffPage",
+      "description": "Get staff page",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "staffId",
+          "type": "String",
+          "info": "Staff ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "toggleFavouriteStaff",
+      "description": "Toggle favourite staff",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "staffId",
+          "type": "String",
+          "info": "Favourite staff ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchStaff",
+      "description": "Search staff model",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getStudio",
+      "description": "Returns a studio model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "studioId",
+          "type": "String",
+          "info": "Studio ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getStudioPage",
+      "description": "Get studio page",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "studioId",
+          "type": "String",
+          "info": "Studio ID",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchStudio",
+      "description": "Search studio model",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Search string",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleReview",
+      "description": "Returns review model with small anime/manga and small user model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "reviewId",
+          "type": "String",
+          "info": "Review id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getReviews",
+      "description": "Returns array of review models with anime/manga and small user model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "seriesType",
+          "type": "String",
+          "info": "anime or manga",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "anime or manga id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserReviews",
+      "description": "Returns array of review models with anime/manga and small user model.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "User id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "setReviewRate",
+      "description": "Set review rate",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "info": "Id of review to rate",
+          "required": true
+        },
+        {
+          "name": "rating",
+          "type": "String",
+          "info": "0 no rating, 1 up/positive rating, 2 down/negative rating",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getRecentForumPage",
+      "description": "Returns threads ordered by most recent activity or creation.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of page",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getNewForumPage",
+      "description": "Returns threads ordered by most recent creation.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "page",
+          "type": "String",
+          "info": "Number of page",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserSubscribedPage",
+      "description": "Returns threads the user has subscribed to, ordered by most recent activity or creation.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleThread",
+      "description": "Get single thread",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "threadId",
+          "type": "String",
+          "info": "Thread id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createThread",
+      "description": "Create thread",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Thread title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "type": "String",
+          "info": "Thread body",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "Comma separated tag ids",
+          "required": false
+        },
+        {
+          "name": "tagsAnime",
+          "type": "String",
+          "info": "Comma separated anime ids",
+          "required": false
+        },
+        {
+          "name": "tagsManga",
+          "type": "String",
+          "info": "Comma separated manga ids",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "editThread",
+      "description": "Edit thread",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Thread title",
+          "required": true
+        },
+        {
+          "name": "body",
+          "type": "String",
+          "info": "Thread body",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "Comma separated tag ids",
+          "required": false
+        },
+        {
+          "name": "tagsAnime",
+          "type": "String",
+          "info": "Comma separated anime ids",
+          "required": false
+        },
+        {
+          "name": "tagsManga",
+          "type": "String",
+          "info": "Comma separated manga ids",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
