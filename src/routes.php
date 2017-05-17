@@ -1,5 +1,6 @@
 <?php
 $routes = [
+    'metadata',
     'getAccessToken',
     'getUser',
     'getUserActivity',
@@ -22,7 +23,7 @@ $routes = [
     'deleteAnimeListEntry',
     'getSeriesPage',
     'getSeriesAiring',
-    'seriesBrowse',
+    'getSeriesList',
     'toggleFavouriteSeries',
     'searchSeries',
     'getCharacter',
