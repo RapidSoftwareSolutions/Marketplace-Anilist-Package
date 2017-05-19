@@ -494,12 +494,6 @@
         {
           "name": "notes",
           "type": "String",
-          "info": "List description",
-          "required": true
-        },
-        {
-          "name": "notes",
-          "type": "String",
           "info": "Manga list description",
           "required": true
         },
