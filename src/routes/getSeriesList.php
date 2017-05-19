@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/Anilist/seriesBrowse', function ($request, $response) {
+$app->post('/api/Anilist/getSeriesList', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
