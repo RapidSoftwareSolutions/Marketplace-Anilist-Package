@@ -29,7 +29,7 @@ $app->post('/api/Anilist/deleteMangaListEntry', function ($request, $response) {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
             if(empty($result['contextWrites']['to'])) {
-                $result['contextWrites']['to']['status_msg'] = "Api return no results";
+                $result['contextWrites']['to']['status_msg'] = "Manga list entry successfully deleted";
             }
         } else {
             $result['callback'] = 'error';

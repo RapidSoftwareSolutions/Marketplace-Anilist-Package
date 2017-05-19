@@ -1176,7 +1176,7 @@
           "name": "body",
           "type": "String",
           "info": "Thread body",
-          "required": false
+          "required": true
         },
         {
           "name": "tags",
@@ -1224,7 +1224,7 @@
           "name": "body",
           "type": "String",
           "info": "Thread body",
-          "required": false
+          "required": true
         },
         {
           "name": "tags",
