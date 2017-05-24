@@ -338,7 +338,7 @@
         {
           "name": "listStatus",
           "type": "Select",
-          "options":["watching","completed","on-hold","dropped","plan to watch"],
+          "options": ["watching", "completed", "on-hold", "dropped", "plan to watch"],
           "info": "watching,completed,on-hold,dropped,plan to watch",
           "required": true
         },
@@ -381,7 +381,7 @@
         {
           "name": "listStatus",
           "type": "Select",
-          "options":["watching","completed","on-hold","dropped","plan to watch"],
+          "options": ["watching", "completed", "on-hold", "dropped", "plan to watch"],
           "info": "watching,completed,on-hold,dropped,plan to watch",
           "required": true
         },
@@ -448,7 +448,7 @@
         {
           "name": "listStatus",
           "type": "Select",
-          "options":["watching","completed","on-hold","dropped","plan to watch"],
+          "options": ["watching", "completed", "on-hold", "dropped", "plan to watch"],
           "info": "watching,completed,on-hold,dropped,plan to watch",
           "required": true
         },
@@ -491,7 +491,7 @@
         {
           "name": "listStatus",
           "type": "Select",
-          "options":["watching","completed","on-hold","dropped","plan to watch"],
+          "options": ["watching", "completed", "on-hold", "dropped", "plan to watch"],
           "info": "watching,completed,on-hold,dropped,plan to watch",
           "required": true
         },
@@ -576,7 +576,7 @@
         {
           "name": "seriesType",
           "type": "Select",
-          "options":["anime","manga"];
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
@@ -607,7 +607,7 @@
         {
           "name": "seriesType",
           "type": "Select",
-          "options":["anime","manga"];
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
@@ -638,7 +638,7 @@
         {
           "name": "seriesType",
           "type": "Select",
-          "options":["anime","manga"];
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         }
@@ -1077,7 +1077,7 @@
         {
           "name": "rating",
           "type": "Select",
-          "options":["0","1","2"];
+          "options": ["0", "1", "2"],
           "info": "0 no rating, 1 up/positive rating, 2 down/negative rating",
           "required": true
         }
