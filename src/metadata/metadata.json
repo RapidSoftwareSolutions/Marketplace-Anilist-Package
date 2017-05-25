@@ -662,7 +662,8 @@
       },
         {
           "name": "seriesType",
-          "type": "String",
+          "type": "Select",
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
@@ -692,7 +693,8 @@
       },
         {
           "name": "seriesType",
-          "type": "String",
+          "type": "Select",
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
@@ -986,7 +988,8 @@
       },
         {
           "name": "seriesType",
-          "type": "String",
+          "type": "Select",
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
@@ -1016,7 +1019,8 @@
       },
         {
           "name": "seriesType",
-          "type": "String",
+          "type": "Select",
+          "options": ["anime", "manga"],
           "info": "anime or manga",
           "required": true
         },
