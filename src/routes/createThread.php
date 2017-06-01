@@ -15,9 +15,26 @@ $app->post('/api/Anilist/createThread', function ($request, $response) {
     $accessToken = $post_data['args']['accessToken'];
     $data['title'] = $post_data['args']['title'];
     $data['body'] = $post_data['args']['body'];
-    $data['tags'] = implode(",",$post_data['args']['tags']);
-    $data['tags_anime'] = implode(",",$post_data['args']['tagsAnime']);
-    $data['tags_manga'] = implode(",",$post_data['args']['tagsManga']);
+
+    if(is_array($post_data['args']['tags'])){
+        $data['tags'] = implode(",",$post_data['args']['tags']);
+    } else{
+        $data['tags'] = $post_data['args']['tags'];
+    }
+
+    if(is_array($post_data['args']['tagsAnime'])){
+        $data['tags_anime'] = implode(",",$post_data['args']['tagsAnime']);
+    } else {
+        $data['tags_anime'] = $post_data['args']['tagsAnime'];
+    }
+
+    if(is_array($post_data['args']['tagsManga'])){
+        $data['tags_manga'] = implode(",",$post_data['args']['tagsManga']);
+    } else {
+        $data['tags_manga'] = $post_data['args']['tagsManga'];
+    }
+
+
     $query_str = $settings['default_url'] . "forum/thread";
     $client = $this->httpClient;
 
