@@ -1192,21 +1192,36 @@
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated tag ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "tag id"
+          }
         },
         {
           "name": "tagsAnime",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated anime ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tagAnime",
+            "type": "String",
+            "info": "Anime id"
+          }
         },
         {
           "name": "tagsManga",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated manga ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tagManga",
+            "type": "String",
+            "info": "Manga id"
+          }
         }
       ],
       "callbacks": [{
@@ -1240,21 +1255,36 @@
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated tag ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "tag id"
+          }
         },
         {
           "name": "tagsAnime",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated anime ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tagAnime",
+            "type": "String",
+            "info": "Anime id"
+          }
         },
         {
           "name": "tagsManga",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated manga ids",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tagManga",
+            "type": "String",
+            "info": "Manga id"
+          }
         }
       ],
       "callbacks": [{
