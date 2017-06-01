@@ -120,7 +120,7 @@ Get anime list
 |------------|------------|----------
 | accessToken| credentials| Access Token
 | id         | String     | Anime id
-| listStatus | String     | ```watching```,```completed```,```on-hold```,```dropped```,```plan to watch```
+| listStatus | Select     | ```watching```,```completed```,```on-hold```,```dropped```,```plan to watch```
 | notes      | String     | List description
 | hidden     | Boolean    | List hidden
 
@@ -131,7 +131,7 @@ Edit anime list entry
 |------------|------------|----------
 | accessToken| credentials| Access Token
 | id         | String     | Anime id
-| listStatus | String     | ```watching```,```completed```,```on-hold```,```dropped```,```plan to watch```
+| listStatus | Select     | ```watching```,```completed```,```on-hold```,```dropped```,```plan to watch```
 | notes      | String     | List description
 | hidden     | Boolean    | List hidden
 
@@ -150,7 +150,7 @@ Create mangalist
 |------------|------------|----------
 | accessToken| credentials| Access Token
 | id         | String     | Manga id
-| listStatus | String     | ```reading```,```completed```,```on-hold```,```dropped```,```plan to read```
+| listStatus | Select     | ```reading```,```completed```,```on-hold```,```dropped```,```plan to read```
 | notes      | String     | List description
 | hidden     | Boolean    | Manga list hidden
 
@@ -161,7 +161,7 @@ Edit mangalist
 |------------|------------|----------
 | accessToken| credentials| Access Token
 | id         | String     | Manga id
-| listStatus | String     | ```reading```,```completed```,```on-hold```,```dropped```,```plan to read```
+| listStatus | Select     | ```reading```,```completed```,```on-hold```,```dropped```,```plan to read```
 | notes      | String     | List description
 | notes      | String     | Manga list description
 | hidden     | Boolean    | Manga list hidden
@@ -188,7 +188,7 @@ Returns a series model.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 | id         | String     | Series id
 
 ## Anilist.getSeriesAiring
@@ -197,7 +197,7 @@ Returns a series airing.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 | id         | String     | Series id
 
 ## Anilist.getSeriesList
@@ -206,7 +206,7 @@ Returns up to 40 small series models.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 
 ## Anilist.toggleFavouriteSeries
 Toggle favourite series.
@@ -214,7 +214,7 @@ Toggle favourite series.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 | id         | String     | Series id
 
 ## Anilist.searchSeries
@@ -223,7 +223,7 @@ Search series models.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 | query      | String     | Search string
 
 ## Anilist.getCharacter
@@ -320,7 +320,7 @@ Returns review model with small anime/manga and small user model.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
+| seriesType | Select     | ```anime``` or ```manga```
 | reviewId   | String     | Review id
 
 ## Anilist.getReviews
@@ -329,8 +329,8 @@ Returns array of review models with anime/manga and small user model.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Access Token
-| seriesType | String     | ```anime``` or ```manga```
-| id         | String     | ```anime``` or ```manga``` id
+| seriesType | Select     | ```anime``` or ```manga```
+| id         | Select     | ```anime``` or ```manga``` id
 
 ## Anilist.getUserReviews
 Returns array of review models with anime/manga and small user model.
@@ -347,7 +347,7 @@ Set review rate
 |------------|------------|----------
 | accessToken| credentials| Access Token
 | id         | String     | Id of review to rate
-| rating     | String     | ```0``` no rating, ```1``` up/positive rating, ```2``` down/negative rating
+| rating     | Select     | ```0``` no rating, ```1``` up/positive rating, ```2``` down/negative rating
 
 ## Anilist.getRecentForumPage
 Returns threads ordered by most recent activity or creation.
@@ -386,9 +386,9 @@ Create thread
 | accessToken| credentials| Access Token
 | title      | String     | Thread title
 | body       | String     | Thread body
-| tags       | String     | Comma separated tag ids
-| tagsAnime  | String     | Comma separated anime ids
-| tagsManga  | String     | Comma separated manga ids
+| tags       | List     | Comma separated tag ids. Example: ```['1','2','3']```
+| tagsAnime  | List     | Comma separated anime ids. Example: ```['1','2','3']```
+| tagsManga  | List     | Comma separated manga ids. Example: ```['1','2','3']```
 
 ## Anilist.editThread
 Edit thread
@@ -398,7 +398,7 @@ Edit thread
 | accessToken| credentials| Access Token
 | title      | String     | Thread title
 | body       | String     | Thread body
-| tags       | String     | Comma separated tag ids
-| tagsAnime  | String     | Comma separated anime ids
-| tagsManga  | String     | Comma separated manga ids
+| tags       | List     | Comma separated tag ids. Example: ```['1','2','3']```
+| tagsAnime  | List     | Comma separated anime ids. Example: ```['1','2','3']```
+| tagsManga  | List     | Comma separated manga ids. Example: ```['1','2','3']```
 
